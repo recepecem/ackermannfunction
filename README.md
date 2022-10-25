@@ -1,4 +1,7 @@
 # AckermannFunction
-Simple Ackermann function written in C language
+## Simple Ackermann function written in C language
 
-You may change the parameters n and m from printf() function's body.
+> ack(1, m) = m + 2;
+> ack(2, m) = 2m + 3;
+> ack(3, m) = 2^(y+3) - 3;
+> ack(4, m) = 2^2^...^2 - 3;

@@ -1,0 +1,41 @@
+//recep ecem
+#include <stdio.h>
+#include <math.h>
+
+long double ackermann(int n, int m);
+int main() {
+    long double ack;
+    int n = 4;
+    int m = 4;
+
+    if((n > 4) || (m > 4)){
+        printf("\n first, calculate -> ");
+        printf("ack(%d,ack(%d,%d))", (n-1), n, (m-1));
+        return 1;
+    }
+    else{
+        ack = ackermann(n, m);
+        printf("\n%0.Lf", ack);
+        return 1;
+    }
+}
+
+long double ackermann(int n, int m) {
+    long double tmp = 2;
+
+    switch (n) {
+        case 1:
+            return m + 2;
+        case 2:
+            return 2 * m + 3;
+        case 3:
+            return powl(2, (m + 3)) - 3;
+        case 4:
+            for (int i = 0; i < m; ++i) {
+                tmp = powl(tmp, m);
+            }
+            return powl(tmp, 16) - 3;
+        default:
+            printf("\nAn unknown problem occured.");
+    }
+}

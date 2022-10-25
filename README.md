@@ -7,6 +7,4 @@
 > 
 > ack(3, m) = 2^(y+3) - 3
 > 
-> ack(4, m) = 2^2^..^mth2^16 - 3
-
-mth2 = means a like 'four**th** 2'
+> ack(4, m) = 2^2^..^2^16 - 3
